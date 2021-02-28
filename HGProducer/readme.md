@@ -30,6 +30,6 @@ All the configuration (number of events, jobs, storage and run dir, ...) is stor
 ### Examples
 
 Three examples are provided in the input directory:
-* electron_E100GeV_z.py: generation of 1000 events GEN/SIM/DIGI/RECO, stored in the EOS space. Three cmsDriver sequences are subsequently executed in the same job: GEN-SIM, DIGI and RECO.
-* electron_E100GeV_z_RECO.py: only perform RECO step, on previously generated dataset, based on the output of the DIGI step (e.g. DIGI.root). No need to provide njobs or nevents, it will figure it out from the input dataset
+* electron_E100GeV_z.py: generation of 1000 events GEN/SIM/DIGI/RECO, stored in the EOS space. Three cmsDriver sequences are subsequently executed in the same job: GEN-SIM, DIGI and RECO, and will be stored in respectively GEN-SIM.root, DIGI.root and RECO.root (according to the cmsDriver command names).
+* electron_E100GeV_z_RECO.py: only perform RECO step, on previously generated dataset, based on the output of the previously created DIGI step (DIGI.root). No need to provide njobs or nevents, it will figure it out from the input dataset.
 * electron_E100GeV_z_NANO.py: NANO plugin producer. It relies on an additional config file which configures the NANO skim. Crucial in this file is the precense of input.root and output.root in the process.source and process.output respectively. The submission script will automatically overwrite these in/output ROOT files with the proper ROOT files according to the input dataset
