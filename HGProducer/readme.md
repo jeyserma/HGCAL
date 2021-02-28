@@ -9,6 +9,8 @@ It provides the following functionalities:
 
 Only a single script scripts/hgSubmit.py is necessary and can be executed within any CMS scram environment.
 
+All functionalities can be tested before submission by using the dryrun option (which generates locally 10 events according to the defined sequences).
+
 ### How to run
 
 The submission script in scripts/hgSubmit.py has the following options:
