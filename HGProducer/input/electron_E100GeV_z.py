@@ -1,6 +1,6 @@
 
 # GEN-SIM
-step1 = "electron_E35GeV_z_cfi --conditions auto:phase2_realistic_T21 --era Phase2C11 --eventcontent FEVTDEBUG -s GEN,SIM --datatier GEN-SIM --beamspot HLLHC14TeV --geometry Extended2026D71"
+step1 = "electron_E100GeV_z_cfi --conditions auto:phase2_realistic_T21 --era Phase2C11 --eventcontent FEVTDEBUG -s GEN,SIM --datatier GEN-SIM --beamspot HLLHC14TeV --geometry Extended2026D71"
 
 # DIGI
 step2 = "step2 --conditions auto:phase2_realistic_T21 -s DIGI:pdigi_valid,L1,L1TrackTrigger,DIGI2RAW,HLT:@fake2 --datatier GEN-SIM-DIGI-RAW --geometry Extended2026D71 --era Phase2C11 --eventcontent FEVTDEBUGHLT"
@@ -13,7 +13,7 @@ step3 = "step3 --conditions auto:phase2_realistic_T21 --era Phase2C11 --eventcon
 ### define configuration
 
 # name of the submission
-cfg_name = "electron_E35GeV_z"
+cfg_name = "electron_E100GeV_z"
 
 # type: cmsDriver or cmsRun
 cfg_type = "cmsDriver"
