@@ -7,9 +7,23 @@ It provides the following functionalities:
 * cmsDriver: generation of GEN/SIM/DIGI/RECO samples using sequences of cmsDriver.py
 * cmsRun: execution of cmsRun, providing an input python file
 
-Only a single script scripts/hgSubmit.py is necessary and can be executed within any CMS scram environment.
+
 
 All functionalities can be tested before submission by using the dryrun option (which generates locally 10 events according to the defined sequences).
+
+### Input/output files
+
+Only a single script scripts/hgSubmit.py is necessary and can be executed within any CMS scram environment. The input script contains all the necessary information about the submission (e.g. number of jobs/events for GEN step, input dataset, ...).
+
+Each job runs in a specific directory,being
+
+```
+$rundir/submission/$jobID/
+```
+where $rundir is the run directory as given in the input file (cfg_run_dir) and $jobID the number of the jobs (from 0 to cfg_njobs). 
+
+
+The output ROOT files are stored in the cfg_storage_dir directory (can be EOS). For each step in the cmsDriver, a file is created with prefix the job ID number. E.g.: 0001_GEN-SIM.root, 0008_DIGI.root, 0111_RECO.root etc.)
 
 ### How to run
 
