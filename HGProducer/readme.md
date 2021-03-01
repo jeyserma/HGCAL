@@ -23,7 +23,7 @@ $rundir/submission/$jobID/
 where $rundir is the run directory as given in the input file (cfg_run_dir) and $jobID the number of the jobs (from 0 to cfg_njobs). 
 
 
-The output ROOT files are stored in the cfg_storage_dir directory (can be EOS). For each step in the cmsDriver, a file is created with prefix the job ID number. E.g.: 0001_GEN-SIM.root, 0008_DIGI.root, 0111_RECO.root etc.)
+The output ROOT files are stored in the cfg_storage_dir directory (can be EOS). For each step in the cmsDriver (or NANOProducer using cmsRun), a file is created with prefix the job ID number. E.g.: 0001_GEN-SIM.root, 0008_DIGI.root, 0111_RECO.root, 0111_NANO.root  etc.)
 
 ### How to run
 
